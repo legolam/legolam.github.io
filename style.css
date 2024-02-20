@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.logo-space {
+    display: flex;
+    justify-content: center; /* 로고 이미지를 수평 가운데로 정렬 */
+    align-items: center; /* 로고 이미지를 수직 가운데로 정렬 */
+    height: 100px; /* 원하는 높이 지정 */
+    background-color: #f0f0f0; /* 배경색 지정 */
+}
+
+.image {
+    background-image: url('logo.jpg');
+    width: 100%; /* 이미지 너비를 부모 요소의 100%로 설정 */
+    max-width: 200px; /* 최대 너비를 200px로 제한 */
+    height: 100px; /* 이미지 높이를 100px로 설정 */
+    background-size: contain; /* 이미지가 div에 완전히 들어맞도록 조정 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 */
+    background-position: center; /* 이미지를 중앙에 배치 */
+}
+
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu-bar ul li {
+    float: left;
+}
+
+.menu-bar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideAnimation 30s infinite;
+}
+
+/* 키 프레임을 사용한 슬라이드 애니메이션 정의 */
+@keyframes slideAnimation {
+    0%, 100% { opacity: 0; }
+    5%, 25% { opacity: 1; }
+}
+
+/* 각 슬라이드에 대한 애니메이션 지연 시간 추가 */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+.slide:nth-child(4) { animation-delay: 15s; }
+.slide:nth-child(5) { animation-delay: 20s; }
+.slide:nth-child(6) { animation-delay: 25s; }
